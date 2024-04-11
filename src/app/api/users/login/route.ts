@@ -42,7 +42,7 @@ export async function POST (request : NextRequest) {
             message : 'Login successful . . .' , 
             success : true
         })
-        response.cookies.set('token' , token , {
+        response.cookies.set('token' , token , {    // setting the field value of 'token' with the created jwt token 
             httpOnly : true
         })
         return response
